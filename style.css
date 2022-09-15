@@ -3,6 +3,7 @@ body {
     background: -webkit-linear-gradient(to right, #3e9f95, white);
     background: linear-gradient(to right, #3e9f95, white);
     background-repeat: repeat-y;
+    background-size: cover;
 }
 
 .containerHeader {
@@ -36,6 +37,10 @@ embed {
     height: 700;
 }
 
+#download {
+    display: none;
+}
+
 p {
     flex: 2;
     align-self:center;
@@ -43,26 +48,11 @@ p {
     text-align: justify;   
 }
 
+.hover-text {
+    color: blue;
+}
 
-/* responsive */
-@media (max-width: 800px) {
-    .containerBody {
-      flex-direction: column;
-    }
 
-    embed {
-        flex: 2;
-        width: 500;
-        height: 800;
-    }
-    
-    p {
-        flex: 2;
-        align-self:center;
-        margin: 20px;
-        text-align: justify;   
-    }
-  }
 
 
 
@@ -94,3 +84,51 @@ p {
     left: 60%;
   }
   
+
+
+
+
+  /* responsive pour smartphone */
+@media (max-width: 800px) {
+    .containerBody {
+      flex-direction: column;
+    }
+
+    embed {
+        flex: 2;
+        width: 500;
+        height: 800;
+    }
+
+    #download {
+        display: inline;
+        text-align: center;
+        font-size: large;
+    }
+    
+    p {
+        flex: 2;
+        align-self:center;
+        margin: 20px;
+        text-align: justify;   
+    }
+    .hover-text {
+        color: black;
+    }
+  }
+
+/* responsive pour grand ecran */
+@media (min-width: 1500px) {
+    
+    p {
+        flex: 2;
+        align-self:center;
+        margin: 20px;
+        text-align: justify; 
+        font-size: x-large;  
+    }
+    #top {
+        top: 850px;
+        left: 65%;
+      }
+  }
